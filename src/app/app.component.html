@@ -9,13 +9,18 @@
  <h2>{{pay.paymentoption_name}}</h2>
 </ng-container>
 </div> -->
-
-<div *ngFor = " let pay of payment_options">
+<div>
+  <h2>{{payment_options</h2>
+    <h2>tickettypes</h2>  
+     <h2>discount_enabled</h2> 
+     <h2>tax_enabled</h2> 
+      <h2>tax:</h2>
+<div *ngFor = " let pay of PaymentOption" >
     <h2> {{pay.paymentoption_id }}</h2>
     <h2>{{pay.paymentoption_name}}</h2>
 </div>
 
-<div *ngFor = "let t of tickettypes" >
+<div *ngFor = "let t of Tickettype"  >
   <h2>{{t.tickettype_avail_quantity}}</h2>
   <h2>{{t.tickettype_id}}</h2>
   <h2>{{t.tickettype_max_limt}}</h2>
@@ -25,6 +30,8 @@
   <h2>{{t.tickettype_price}}</h2>
 
 </div>
+</div> 
+
 <app-checkout-prepare>
 
 </app-checkout-prepare>
