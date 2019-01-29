@@ -1,36 +1,42 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<!-- <h2>
-  {{events.live.0.id}}
-</h2> -->
-<h2>Angular api</h2>
-<!-- <div>
-  <ng-container *ngFor = let pay of payment_options>
- <h2> {{pay.paymentoption_id }}</h2>
- <h2>{{pay.paymentoption_name}}</h2>
-</ng-container>
-</div> -->
-<div>
-  <h2>{{payment_options</h2>
-    <h2>tickettypes</h2>  
-     <h2>discount_enabled</h2> 
-     <h2>tax_enabled</h2> 
-      <h2>tax:</h2>
-<div *ngFor = " let pay of PaymentOption" >
-    <h2> {{pay.paymentoption_id }}</h2>
-    <h2>{{pay.paymentoption_name}}</h2>
-</div>
 
-<div *ngFor = "let t of Tickettype"  >
-  <h2>{{t.tickettype_avail_quantity}}</h2>
-  <h2>{{t.tickettype_id}}</h2>
-  <h2>{{t.tickettype_max_limt}}</h2>
-  <h2>{{t.tickettype_min_limit}}</h2>
- <h2>{{t.tickettype_name}} </h2>
-  <h2>{{t.tickettype_onsale}}</h2>
-  <h2>{{t.tickettype_price}}</h2>
+<h2 class="head">Eventzilla-Checkout/Prepare-API</h2>
 
-</div>
-</div> 
+<!-- <ul *ngFor="let t of tickettype">
+  <li>
+     <p> {{t.ttickettype}}</p> 
+  </li>
+</ul> -->
+<ul *ngFor= " let t of pay ">
+  <li>
+      <h2></h2> {{t.paymentoption_id}}
+       {{t.paymentoption_name}}
+  </li>
+  </ul>
+  <div *ngFor = "let t of tickettype"  >
+    <table class="table table-striped"><tr>
+      <td> Ticket-Quantity </td>
+      <td>Ticket-TypeId</td>
+      <td> Ticket-MaxLimit</td>
+       <td> Ticket-MinLimit</td>
+       <td> Ticket-Name </td>
+      <td>Ticket-Onsale</td>
+       <td> Ticket-price</td>
+  </tr>
+  <tr>
+  <td>{{t.tickettype_avail_quantity}}</td>
+  <td>{{t.tickettype_id}}</td>
+    <td>{{t.tickettype_max_limt}}</td>
+    <td>{{t.tickettype_min_limit}}</td>
+   <td>{{t.tickettype_name}} </td>
+    <td>{{t.tickettype_onsale}}</td>
+   <td>{{t.tickettype_price}}</td> 
+  </tr>
+</table>
+  
+    </div>
+
+
 
 <app-checkout-prepare>
 
